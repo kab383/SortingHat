@@ -1,0 +1,29 @@
+body {
+    background: rgb(16, 89, 138);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+@font-face {
+    font-family: magicSchoolOne;
+    src: url(./assets/MagicSchoolOne.TTF)
+}
+
+h1 {
+    font-family: "magicSchoolOne", serif;
+    font-size: 85px;
+    text-align: center;
+    text-shadow: 1px 4px 6px rgba(0, 0, 0, .75);
+}
+
+#main-container {
+    width: 100%;
+}
+
+.navigation, #question-container {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
