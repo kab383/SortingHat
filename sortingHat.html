@@ -9,22 +9,24 @@
 </head>
 <body>
     <h1>Sorting Hat</h1>
-    <p>Welcome, aspiring wizard! You will now be sorted into one of the four noble houses of Hogwarts: Gryffindor, Hufflepuff, Ravenclaw, and Slytherin. The Sorting Hat will gather information about you, and evaluate both your qualities and desires to place you in the proper house.</p>
+    <p>Welcome to Hogwarts, aspiring wizards and witches! You will now be sorted into one of the four noble houses of Hogwarts: Gryffindor, Hufflepuff, Ravenclaw, and Slytherin. The Sorting Hat will gather information about you, and evaluate both your qualities and desires to place you in the proper house.</p>
     
     <section id="main-container">
         <div class="navigation">
             <button class="start-button" id="start-quiz-button">Start Quiz</button>
-            <button class="next-button" id="next-question-button"></button>
         </div>
 
         <div id="question-container">
             <div id="question">Dynamic Question</div>
             <div class="button-table" id="answer-buttons">
-                <button class="button"></button>
-                <button class="button"></button>
-                <button class="button"></button>
-                <button class="button"></button>
+                <button class="answers" id="answer-a" onclick="selectAnswerA()">a</button>
+                <button class="answers" id="answer-b" onclick="selectAnswerB()">b</button>
+                <button class="answers" id="answer-c" onclick="selectAnswerC()">c</button>
+                <button class="answers" id="answer-d" onclick="selectAnswerD()">d</button>
             </div>
+        </div>
+        <div id="results-container">
+            <div id="house-container"></div>
         </div>
     </section>
 
