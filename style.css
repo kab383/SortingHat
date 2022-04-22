@@ -1,29 +1,111 @@
-body {
-    background: rgb(16, 89, 138);
+html {
+    height: 100vh;
+    background: url(./assets/hogwartsHall.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
 }
 
+body {
+    background-image: url(./assets/finalScroll.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50em;
+}
+
 @font-face {
     font-family: magicSchoolOne;
-    src: url(./assets/MagicSchoolOne.TTF)
+    src: url(./assets/MagicSchoolOne.ttf)
+}
+
+@font-face {
+    font-family: WizardWorld;
+    src: url(./assets/WizardWorld.ttf)
 }
 
 h1 {
     font-family: "magicSchoolOne", serif;
-    font-size: 85px;
+    font-size: 115px;
     text-align: center;
+    vertical-align: top;
     text-shadow: 1px 4px 6px rgba(0, 0, 0, .75);
+    margin-top: 225px;
 }
 
 #main-container {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.navigation, #question-container {
-    width: 400px;
+p {
+    font-family: "WizardWorld", serif;
+    padding: 1em;
+    padding-left: 30%;
+    padding-right: 30%;
+    word-wrap: normal;
+    text-align: center;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, .35);
+    margin-top: -5px;
+}
+
+.navigation {
+    text-align: center;
+}
+
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#house-container {
+    text-align: center;
+
+}
+
+#start-quiz-button {
+    margin-top: -10px;
+    background-color: rgba(0, 0, 0, .00);
+}
+
+#question {
+    font-family: "WizardWorld", serif;
+    padding: 1em;
+    text-align: center;
+}
+
+.button-table {
+    padding: 1px;
+}
+
+.answers {
+    font-family: "WizardWorld", serif;
+    font-weight: 700;
+    size: 5em;
+    background-color: rgba(0, 0, 0, .00);
+    background-color: #AAAAAA;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 0;
+    border-width: 1px;
+    padding: 1em;
+}
+
+.fade-in-house-message {
+    font-family: "magicSchoolOne", serif;
+    font-size: 40px;
+    color: black;
+    text-shadow: 1px 2px 4px rgba(0, 0, 0, .35);
+    animation: fadeIn linear 8s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
 }

@@ -5,16 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <style type="text/css">* {cursor: url(https://cur.cursors-4u.net/user/use-1/use160.cur), auto !important;}</style><a href="https://www.cursors-4u.com/cursor/2011/02/06/harry-potter-magical-wand.html" target="_blank" title="Harry Potter Magical Wand"><img src="https://cur.cursors-4u.net/cursor.png" border="0" alt="Harry Potter Magical Wand" style="position:absolute; top: 0px; right: 0px;" /></a>
     <title>Sorting Hat</title>
 </head>
+
 <body>
     <h1>Sorting Hat</h1>
-    <p>Welcome to Hogwarts, aspiring wizards and witches! You will now be sorted into one of the four noble houses of Hogwarts: Gryffindor, Hufflepuff, Ravenclaw, and Slytherin. The Sorting Hat will gather information about you, and evaluate both your qualities and desires to place you in the proper house.</p>
-    
     <section id="main-container">
+        <p>Aspiring wizards and witches, listen carefully! You will now be sorted into one of the four noble houses of Hogwarts: <em>Gryffindor, Hufflepuff, Ravenclaw, and Slytherin</em>. The Sorting Hat will now be placed on your head. <strong>Click the hat to begin.</p>
         <div class="navigation">
-            <button class="start-button" id="start-quiz-button">Start Quiz</button>
-        </div>
+            <button class="start-button" id="start-quiz-button"><img src="./assets/sortingHatClip.jpeg" height="70" width="80"></button>
+        
 
         <div id="question-container">
             <div id="question">Dynamic Question</div>
@@ -25,12 +26,12 @@
                 <button class="answers" id="answer-d" onclick="selectAnswerD()">d</button>
             </div>
         </div>
-        <div id="results-container">
+        <div class="fade-in-house-message" id="results-container">
             <div id="house-container"></div>
+        </div>
         </div>
     </section>
 
-<!-- <button id="to-sortingHat" type="submit">Click here to reveal your Hogwarts House!<button> -->
 
     <script src="sortingHat.js"></script>
 </body>

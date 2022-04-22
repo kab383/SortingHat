@@ -27,7 +27,7 @@ let quizContent = [
         prompt: 'Please select an element of nature that resonates most with your character:',
     },
     {
-        prompt: 'Below, you will have four animals to choose from. Which one embodies the traits that you value most?',
+        prompt: 'What is your spirit animal?',
     },
     {
         prompt: 'Select the option that sounds most like you:',
@@ -40,16 +40,17 @@ let quizContent = [
     },
 ];
 
-// Empty array that will collect pushed answers
+// Empty array that will collect pushed answers.
 let collectedAnswers = [];
 console.log(collectedAnswers.length);
 
+// Empty arrays to collect the house scores.
 let gryffindor = [];
 let hufflepuff = [];
 let ravenclaw = [];
 let slytherin = [];
 
-questionContainer.style.display = 'none';
+questionContainer.style.visibility = 'hidden';
 
 startButton.addEventListener('click', fetchData)
 
@@ -61,7 +62,7 @@ function fetchData() {
 
 function startQuiz(data) {
     startButton.style.display = 'none';
-    questionContainer.style.display = 'block';
+    questionContainer.style.visibility = 'visible';
     displayAnswers(data);
     populateQuestions();
 };
@@ -80,6 +81,7 @@ function populateQuestions() {
     } 
 };
 
+// Pulls answer options from the API and puts them in the HTML buttons
 function displayAnswers(answer) {
     if (collectedAnswers.length === 0) {
         console.log(answerA.innerText = answer[0].element);
@@ -107,11 +109,12 @@ function displayAnswers(answer) {
         console.log(answerC.innerText = answer[2].founder);
         console.log(answerD.innerText = answer[3].founder);
     } else if (collectedAnswers.length > 4) {
-        questionContainer.style.display = 'none';
+        questionContainer.style.visibility = 'hidden';
+        // This last conditional hides the quiz after the last question is answered
     }
 };
 
-//PUSH ANSWER TO AN EMPTY HOUSE ARRAY WITH AN IF STATEMENT
+// Each answer button has functionality that propels the quiz forward by populating the next set of information, and pushing the answers to both the empty quiz result array, and the house arrays.
 function selectAnswerA() {
     console.log(answerA);
     console.log(answerA.textContent);
@@ -200,6 +203,7 @@ function selectAnswerD() {
     endQuizSelectHouse();
 };
 
+// This function ends the quiz and calls the function to display the house winner.
 function endQuizSelectHouse(){
     if (collectedAnswers.length > 4){
         houseSelector();
@@ -208,6 +212,7 @@ function endQuizSelectHouse(){
     };
 }
 
+// This function is the working piece behind counting the score of each house based on the answer buttons clicked.
 function houseSelector() {
     console.log(gryffindor.length);
     console.log(ravenclaw.length);
