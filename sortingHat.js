@@ -223,8 +223,8 @@ function houseSelector() {
     } else if (ravenclaw.length > gryffindor.length && ravenclaw.length > hufflepuff.length && ravenclaw.length > slytherin.length) {
         console.log(houseContainer.innerText = 'You belong in house RAVENCLAW!')
     } else if (hufflepuff.length > ravenclaw.length && hufflepuff.length > gryffindor.length && hufflepuff.length > slytherin.length) {
-        console.log(houseContainer.innerText = 'You belong in house HUFFLEPUFF')
+        console.log(houseContainer.innerText = 'You belong in house HUFFLEPUFF!')
     } else if (slytherin.length > ravenclaw.length && slytherin.length > hufflepuff.length && slytherin.length > gryffindor.length) {
-        console.log(houseContainer.innerText = 'You belong in house SLYTHERIN')
+        console.log(houseContainer.innerText = 'You belong in house SLYTHERIN!')
     }
 };
